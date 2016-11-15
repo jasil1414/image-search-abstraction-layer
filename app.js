@@ -8,7 +8,11 @@ var routes = require('./controller/route');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://test:test@ds151127.mlab.com:51127/jasil_db');
 
+app.set('view engine','pug');
+app.set('views', './views');
+
 app.use('/', routes)
 
-app.listen(3000);
-console.log('Listening on port: 3000');
+app.listen(app.get('port'), function(){
+  console.log('Listening on port: '+ app.get('port'));
+});
