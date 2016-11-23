@@ -6,7 +6,7 @@ var searchApi = require('./logic/api_search');//search handler
 var saveSearch = require('./logic/savesearch')//save search
 
 var router = express.Router();
-var bingSubscriptionKey = '03900cf9165242aaa0dd820cd197593c'//bing subscription key
+var bingSubscriptionKey = //add bing subscription key here.
 
  router.get('/', function(req,res){
    res.render('index');
